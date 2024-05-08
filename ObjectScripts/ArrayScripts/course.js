@@ -62,7 +62,7 @@ function getcourseTitle(courseId) {
 function getCourseUnderFiftyDollars() {
     let title = []
     for (let i = 0; i < courses.length; i++) {
-        if (courses[i].Fee <= 50) {
+        if (parseFloat(courses[i].Fee <= 50)) {
             title.push(courses[i].Title)
         }
     }
