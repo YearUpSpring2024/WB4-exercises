@@ -68,11 +68,15 @@ function whichAcademyMemberHaveBeenInAFilm() {
     let hasBeenInaFilm = [];
 
     for (let i = 0; i < academyMembers.length; i++) {
-        if (academyMembers[i].films.length > 0) {
-            hasBeenInaFilm.push(academyMembers[i].name)
+        let films = academyMembers[i].films;
+        for (let j = 0; j < films.length; j++) {
+            if (films[j][0].toLocaleUpperCase() === "A") {
+                hasBeenInaFilm.push(academyMembers[i].name);
+            }
         }
     }
     return hasBeenInaFilm;
+
 }
-console.log("\nwhich Academy member that has been in a film? " + whichAcademyMemberHaveBeenInAFilm());
+console.log("\nwhich Academy member that has been in a film and name starts with A? " + whichAcademyMemberHaveBeenInAFilm());
 // that starts with "A"
