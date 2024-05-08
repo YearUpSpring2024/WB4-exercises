@@ -72,6 +72,7 @@ function whichAcademyMemberHaveBeenInAFilm() {
         for (let j = 0; j < films.length; j++) {
             if (films[j][0].toLocaleUpperCase() === "A") {
                 hasBeenInaFilm.push(academyMembers[i].name);
+                // printing twice
             }
         }
     }
